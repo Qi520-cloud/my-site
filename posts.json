@@ -1,0 +1,14 @@
+[
+  {
+    "id": "wsl-notes",
+    "title": "我的 WSL2 环境搭建踩坑记录",
+    "date": "2026-08-01",
+    "file": "posts/wsl-notes.md"
+  },
+  {
+    "id": "css-grid-first",
+    "title": "第一次用 CSS Grid 排卡片",
+    "date": "2026-08-02",
+    "file": "posts/css-grid-first.md"
+  }
+]

@@ -1,0 +1,131 @@
+/* 颜色变量：一处定义，全局复用 */
+:root {
+  --bg: #fafafa;      /* 页面背景 */
+  --text: #1f2937;    /* 正文深灰 */
+  --accent: #2563eb;  /* 主题蓝 */
+  --muted: #6b7280;   /* 次要文字灰 */
+}
+
+/* 去掉浏览器默认边距，避免"贴边"的突兀感 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Microsoft YaHei", sans-serif;
+  line-height: 1.7;
+}
+
+/* 内容统一宽度并居中：header/main/footer 都套用 */
+header, main, footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* display:flex 让导航链接从"竖着堆"变"横着排" */
+nav {
+  display: flex;
+  gap: 24px;          /* 链接间距 */
+  padding: 24px 0;
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;   /* 去掉下划线 */
+}
+
+nav a:hover {
+  color: var(--accent);    /* 悬停变色 */
+}
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid #e5e7eb;  /* 区块分隔线 */
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.6rem; margin-bottom: 16px; }
+p  { color: var(--muted); }
+
+footer {
+  padding: 32px 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Grid：3 列等宽，列间距 20px */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 1fr = 平分剩余空间 */
+  gap: 20px;
+}
+
+/* 卡片本体 */
+.project-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;   /* 圆角 */
+  padding: 20px;
+  transition: border-color 0.2s;   /* 让悬停变色平滑过渡 */
+}
+
+.project-card:hover {
+  border-color: var(--accent);     /* 悬停时边框变主题蓝 */
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+}
+
+/* 标签：小圆角胶囊 */
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: #eff6ff;
+  border-radius: 999px;   /* 数值很大 → 变成胶囊形 */
+}
+
+/* 列表去圆点 */
+.post-list {
+  list-style: none;
+}
+
+.post-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;   /* 条目间细分隔线 */
+}
+
+/* flex + space-between：标题靠左，日期靠右 */
+.post-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-list a:hover { color: var(--accent); }
+
+.post-list time {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}

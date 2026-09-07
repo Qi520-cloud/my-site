@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- header：页面头部，放导航 -->
+  <header>
+    <nav>
+      <a href="#about">关于</a>
+      <a href="#projects">项目</a>
+      <a href="#blog">博客</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- section#about：为什么用 section？因为它是一块独立主题内容 -->
+    <section id="about">
+      <h1>你好，我是 Qi</h1>
+      <p>这里是自我介绍哦（哈撒给）……</p>
+    </section>
+
+    <section id="projects">
+      <h2>项目</h2>
+      <!-- 这里放 3 张项目卡片 -->
+       <div class="projects-grid">
+        <article class="project-card">
+         <h3>记账本 Web 应用</h3>
+         <p>全栈练手项目：React + Node + 数据库，目前正在开发</p>
+         <span class="tag">进行中</span>
+         </article>
+        <article class="project-card">
+         <h3>我的作品集网站</h3>
+         <p>就是你现在看的这个站，从零手写 HTML/CSS/JS</p>
+         <span class="tag">W1 完成</span>
+        </article>
+        <article class="project-card">
+          <h3>（第三个项目占位）</h3>
+          <p>留给下一个想做的项目，先占个位置</p>
+          <span class="tag">规划中</span>
+         </article>
+       </div>
+    </section>
+
+    <section id="blog">
+      <h2>博客</h2>
+      <!-- 这里放 2 篇文章链接 -->
+       <ul class="post-list">
+        
+       </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Qi</p>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章 | 我的主页</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">← 返回首页</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1 id="post-title"></h1>
+    <p id="post-date" class="post-date"></p>
+    <article id="post-content"></article>
+  </main>
+
+  <!-- marked.js：CDN 引入（要联网） -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="js/post.js"></script>
+</body>
+</html>
